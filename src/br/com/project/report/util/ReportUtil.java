@@ -27,6 +27,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 import org.springframework.stereotype.Component;
+
 @SuppressWarnings("deprecation")
 @Component
 public class ReportUtil implements Serializable{
@@ -64,8 +65,7 @@ public class ReportUtil implements Serializable{
 				listDataBeanColletionReport);
 
 		/*
-		 * Fornece o caminho fisico até a pasta que contem os relatórios
-		 * compilador .jasper
+		 * Fornece o caminho fisico até a pasta que contem os relatórios compilador .jasper
 		 */
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.responseComplete();
@@ -150,7 +150,7 @@ public class ReportUtil implements Serializable{
 		/* Remove o arquivo do servidor após ser feito o download pelo usuário */
 		arquivoGerado.deleteOnExit();
 		
-		/* Cria o InputStream para ser usado para pelo PrimeFaces */
+		/* Cria o InputStream para ser usado pelo PrimeFaces */
 		InputStream conteudoRelatorio = new FileInputStream(arquivoGerado);
 		
 		/* Faz o retorno para a aplicação. */
