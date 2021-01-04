@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Implemetar Serializable para  SimpleJdbcCall
- * @author alex
+ * @author Douglas
  *
  */
 @Component
